@@ -1,0 +1,40 @@
+@charset "utf-8";
+body{
+    text-align: center;
+    display: block;
+    margin: 8px;
+    font-family:"ＭＳ Ｐゴシック","MS PGothic","Helvetica";
+    font-size: 13pt;
+}
+#password{
+    font-size: 30pt;
+}
+input{
+    font-size: 20pt;
+    font-family:"ＭＳ Ｐゴシック","MS PGothic","Helvetica";
+}
+#message{
+    font-size: 30pt;
+}
+table{
+    width: 600px;
+    margin:30px auto;
+    background-color: white;
+    border:solid 1px black;
+}
+th{
+    background-color: gray;
+    border: solid 1px black;
+}
+td{
+    border: solid 1px black;
+}
+.kamoku{
+    text-align: left;
+}
+.tanni{
+    text-align: right;
+}
+#protected-content{
+    margin-bottom: 800px;
+}

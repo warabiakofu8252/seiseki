@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>成績表</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body background="seisekihaikei.gif">
+    <!--パスワード入力させるコード-->
+    <div id="login-form">
+        <h1 style="margin-bottom: 150px;">偽成績ログインフォーム</h1>
+        <p>良い子はこういうことをしないように!</p>
+        <p>まっ、基本製作者じゃないとパスワードは知らないはずだけどね!</p>
+        <input type="password" id="password" placeholder="パスワード"><br>
+        <input type="submit" onclick="login()" value="ログイン" style="position: absolute;">
+        <input type="submit" onclick="forget()" style="position: relative; margin-left: 190px;" value="分からない場合">
+        <p id="message"></p>
+        <p style="color: blue;" onclick="why()">このサイトについて</p>
+    </div>
+    <!--成功したら-->
+    <div id="protected-content" style="display: none;">
+        <p>ようこそ!あなたも悪の世界に入りましたね!</p>
+        <p style="margin-bottom: 200px;">この情報は本当の成績ではございません。</p>
+        <p style="color: blue; font-weight: bold; font-size: 9pt;">≪↓　その他の処理の選択はこちらから　↓≫</p>
+        <input type="submit" onclick="back()" value="情報選択画面に戻る" style="font-size: 10pt;">
+        <table border="1" style="width: 170px; margin: 20px auto; font-size: 14pt;">
+            <tr>
+                <td style="font-weight: bold;">成績情報</td>
+            </tr>
+        </table>
+        <table border="1">
+            <tr>
+                <th colspan="1">科目名</th>
+                <th colspan="1">単位数</th>
+                <th colspan="1">評価</th>
+                <th colspan="1">修得年度</th>
+                <th colspan="2">前期／後期</th>
+                <th colspan="1">備考</th>
+            </tr>
+            <tr>
+                <td class="kamoku">基礎力学Ⅱ</td>
+                <td class="tanni">2</td>
+                <td>S</td>
+                <td>R06</td>
+                <td>前期</td>
+                <td>&nbsp;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="kamoku">観光交通論</td>
+                <td class="tanni">2</td>
+                <td>S</td>
+                <td>R06</td>
+                <td>前期</td>
+                <td>&nbsp;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="kamoku">交通システム工学インセンティブ</td>
+                <td class="tanni">2</td>
+                <td>S</td>
+                <td>R04</td>
+                <td>前期</td>
+                <td>&nbsp;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="kamoku">交通流理論</td>
+                <td class="tanni">2</td>
+                <td>S</td>
+                <td>R06</td>
+                <td>前期</td>
+                <td>&nbsp;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="kamoku">構造力学Ⅰ</td>
+                <td class="tanni">2</td>
+                <td>S</td>
+                <td>R05</td>
+                <td></td>
+                <td>後期</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="kamoku">構造力学演習</td>
+                <td class="tanni">1</td>
+                <td>S</td>
+                <td>R05</td>
+                <td>&nbsp;</td>
+                <td>後期</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="kamoku">プロジェクトマネジメント</td>
+                <td class="tanni">2</td>
+                <td>B</td>
+                <td>R05</td>
+                <td>&nbsp;</td>
+                <td>後期</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="kamoku">物理学Ⅰ</td>
+                <td class="tanni">2</td>
+                <td>B</td>
+                <td>R04</td>
+                <td>前期</td>
+                <td>&nbsp;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="kamoku">ユニバーサルデザイン</td>
+                <td class="tanni">2</td>
+                <td>B</td>
+                <td>R05</td>
+                <td>&nbsp;</td>
+                <td>後期</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="kamoku">建設材料</td>
+                <td class="tanni">2</td>
+                <td>C</td>
+                <td>R05</td>
+                <td>&nbsp;</td>
+                <td>後期</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="kamoku">鉄道工学</td>
+                <td class="tanni">2</td>
+                <td>S</td>
+                <td>R06</td>
+                <td>前期</td>
+                <td>&nbsp;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="kamoku">国際開発援助論</td>
+                <td class="tanni">2</td>
+                <td>S</td>
+                <td>R06</td>
+                <td>前期</td>
+                <td>&nbsp;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="kamoku"></td>
+                <td class="tanni"></td>
+                <td></td>
+                <td></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold;">合計単位数</td>
+                <td class="tanni" style="font-weight: bold;">100</td>
+                <td colspan="5"></td>
+            </tr>
+        </table>
+        <table border="1" style="width: 170px; margin: 20px auto; font-size: 14pt;">
+            <tr>
+                <td style="font-weight: bold;">年次別GPA</td>
+            </tr>
+        </table>
+        <table border="1">
+            <tr>
+                <th>年次</th>
+                <th>前期</th>
+                <th>後期</th>
+                <th>年間</th>
+            </tr>
+            <tr>
+                <td>1年次</td>
+                <td>2.38</td>
+                <td>2.13</td>
+                <td>2.35</td>
+            </tr>
+            <tr>
+                <td>2年次</td>
+                <td>2.38</td>
+                <td>2.33</td>
+                <td>2.36</td>
+            </tr>
+            <tr>
+                <td>3年次</td>
+                <td>3.62</td>
+                <td></td>
+                <td>3.62</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="font-weight: bold;">累計</td>
+                <td style="font-weight: bold;">2.94</td>
+            </tr>
+        </table>
+        <img src="https://www.kyoumu.cst.nihon-u.ac.jp/image/PageTop.jpg" onclick="window.scrollTo(0, 0);">
+    </div>
+    <div id="protected-content2" style="display: none;">
+        <p style="font-size: 30pt; line-height: 80px; width: 80%; margin: auto; text-align: justify;">あっははは、お前は製作者ではないからパスワードが分かるはずもない!残念だったな!</p>
+        <button onclick="back()">戻る</button>
+    </div>
+    <div id="protected-content3" style="display: none;">
+        <p style="font-size: 20pt; line-height: 80px; width: 80%; margin: auto; text-align: justify;">
+            私は小学生の時から頭が悪く成績が平均的かそれ以下かのどちらかで決して良いと言われる成績ではありませんでした。
+            ですので私は親にその成績を見せると非常にがっかりをさせてしまいました。そこでいつか嘘をついてもいいから成績が良いのを1回見せてみたかったのです。
+            これは小学生のころからの野望でした。まあ、まじめに勉強をして良い成績を取れっていう話ですよね(笑)。
+            大抵の高校は私の高校もそうでしたが紙で成績が発表されるため偽造のしようがありません。しかし私は大学生になり、成績の発表方法が今まで紙だったものがサイトでの発表になりました。
+            最初の成績が来た時私の大学では夏季休暇あけでございましたが成績が発表されました。結果、単位は1科目落としたもののそこまで成績が悪いものではありませんでした。ですが、決して
+            親に堂々と見せれる成績ではありませんでした。大抵の大学生はそうだと思いますが、大学生はバイトにいそしむ時間がたくさん取れて、暇な時間があると思います。私もその1人でした。その暇時間を利用しよろしくないですが新しくサイトを作成し、偽造することにしました。
+            しかしサイトを作成するには、html、css、jsが出来なければ話になりません。全くプログラミング経験がなかった私にとってはスラスラとできるわけがありませんでした。大学終わりやバイトが終わった後でネットとかで調べながら、プログラミングを作成していましたが
+            当時大学1年生の私にとってはあまりにもレベルが高く、そこまでの技術がありませんでした。そして挫折をしてしまい、プログラミングを辞めてしまいました。しかし私は1年後YouTubeである動画を
+            発見しプログラミングに再燃しました。その方が<span style="color: red;">ラムダ技術部</span>さん(以下:ラムダさん)でした。ラムダさんの詐欺サイトを作ろう(該当動画:【注意】ワンクリック詐欺を作るのちょろすぎて草<a href="https://www.youtube.com/watch?v=vZnENolQu-0" style="word-break: break-all;">https://www.youtube.com/watch?v=vZnENolQu-0</a>)という
+            気持ちが沸き再燃いたしました。また、クイズノックさんのふくらPさんが仰っていた「使う側より作る方が強い」(該当動画:東大生100点は取り飽きたので人生最高得点を取る旅に出ます<a href="https://www.youtube.com/watch?v=AISo8I4xYL4" style="word-break: break-all;">https://www.youtube.com/watch?v=AISo8I4xYL4</a>)という言葉にも感動し、このサイトを
+            制作するに至りました。そして、そこから1か月後ついに完成いたしました。これは努力した買いがありました。まあ、次はこんなものに頼らず自力で良い成績が取れるように頑張りたいです。仮に良い成績が取れていたら、このサイトは更新されません!
+        </p>
+        <button onclick="back()">戻る</button>
+    </div>
+    <p>製作者:ワラビアコフ</p>
+    <p>年齢:20歳 大学3年生</p>
+    <p>最終編集日:2024年4月28日</p>
+    <script src="index.js"></script>
+</body>
+</html>
